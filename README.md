@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#  Coding Interview: Search & Sort Filter
+
+## Overview
+This is a 20-minute coding interview task focused on React fundamentals, state management, API integration, and user experience optimization.
+
+## Task Requirements
+
+### Core Features (Must Implement)
+1. **API Integration**: Fetch products from `/api/products` endpoint
+2. **Search Logic**: Connect search input to filter product names as the user types
+3. **Sorting Logic**: Implement Low to High and High to Low sorting functionality by price
+4. **Product Display**:  Show all filtered products and display them
+
+**Note**: The UI is already implemented! Focus on connecting the logic to the existing interface.
+
+### Bonus Features (Extra Points)
+- **Loading States**: Show loading spinner while fetching data
+- **Error Handling**: Display error messages with retry functionality
+- **Debouncing**: Add 300ms delay to prevent excessive filtering on every keystroke
+
 
 ## Getting Started
 
-First, run the development server:
+1. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. **Open your browser** to `http://localhost:3000`
+
+3. **Start coding** in `components/ProductSearchStarter.js`
+
+## API Endpoint
+
+The application includes a mock API endpoint at `/api/products` that returns:
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "name": "Apple MacBook Pro",
+      "price": 1999,
+      "category": "Electronics"
+    },
+    // ... more products
+  ],
+  "total": 12
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tips for Success
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Start simple**: Get basic functionality working first
+2. **Test frequently**: Check your work as you go
+3. **Ask questions**: Clarify requirements if needed
+4. **Focus on core features**: Don't get distracted by bonus features initially
+5. **Explain your approach**: Talk through your thought process
 
-## Learn More
+## Sample Data
+The API includes 12 sample products with varying prices from $60 to $1999.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Good luck! 
